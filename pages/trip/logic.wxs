@@ -1,0 +1,3 @@
+var tools = require('trip.wxs')
+console.log(tools.msg)
+console.log(tools.bar(tools.foo))

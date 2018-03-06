@@ -1,0 +1,25 @@
+<view>
+<text class='ctry' wx:for="{{country}}" wx:for-index="idx" wx:for-item="itemName">{{idx}}+{{itemName}}</text>
+</view>
+<block wx:for="{{['red','blue','green']}}">
+<view>{{index}}:</view>
+<view>{{item}}</view>
+</block>
+<switch wx:for="{{objectArray}}" wx:key="unique" style='display:block'>{{item.unique}}</switch>
+<button bindtap='switch'>switch</button>
+<button bindtap='addToFront'>addtofront</button>
+
+<switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+<button bindtap="addNumberToFront"> Add to the front </button>
+
+
+<view wx:if="{{length>5}}">大于five</view>
+
+<button bindtap='temp'>模板学习</button>
+<!--引用import 有作用域的概念，即只会 import 目标文件中定义的 template，而不会 import 目标文件 import 的 template  -->
+<import src="../temp/temp.wxml" />
+<template is="msgtemp" data="{{...item}}"></template>
+<!--引用模块  -->
+<wxs src="logic.wxs" module="tools"/>
+<view>{{tools.msg}}++{{tools.bar(tools.foo)}}</view>
+

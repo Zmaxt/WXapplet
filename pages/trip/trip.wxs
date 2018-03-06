@@ -1,0 +1,9 @@
+var foo = 'hello';
+var bar = function(d){
+  return d;
+}
+module.exports={
+  foo:foo,
+  bar:bar
+}
+module.exports.msg = 'world'

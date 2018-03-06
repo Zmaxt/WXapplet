@@ -1,0 +1,9 @@
+<!--pages/temp/temp.wxml-->
+<template name="msgtemp">
+<view>
+<text>{{index}}:{{msg}}</text>
+<text>time:{{time}}</text>
+</view>
+</template>
+<!--is可以使用三目式  -->
+<template is="msgtemp" data="{{...item}}"></template>

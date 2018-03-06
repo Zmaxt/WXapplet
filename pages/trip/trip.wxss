@@ -1,0 +1,4 @@
+/* pages/trip/trip.wxss */
+.ctry{
+  color: blue
+}

@@ -1,0 +1,4 @@
+<view class="container">
+    <text class="motto">Hello, {{name}}</text>
+    <button bindtap="toMina" type="default">开启小程序之旅</button>
+</view>
